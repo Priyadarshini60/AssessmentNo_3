@@ -10,17 +10,19 @@ namespace Priyanka_CustAssignment.Controllers
 {
     public class AdminController : Controller
     {
+        custEntities db = new custEntities();
         public ActionResult Index()
         {
             return View();
         }
-      
+
+        public ActionResult List()
+        {
+            return View(db.Priyanka_Customer.ToList());
+        }
 
 
-        //public ActionResult List()
-        //{
-        //    return View(db.Priyanka_User.ToList());
-        //}
+        
 
 
     }

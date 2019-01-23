@@ -20,6 +20,5 @@ namespace Priyanka_CustAssignment.Models
         public string Address { get; set; }
         public string MobileNumber { get; set; }
         public string Status { get; set; }
-        public List<string> ListCustomer { get; set; }
     }
 }

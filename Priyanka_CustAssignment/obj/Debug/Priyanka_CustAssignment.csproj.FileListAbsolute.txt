@@ -124,6 +124,7 @@ C:\Users\TRG\Downloads\PriyaAssignment\project\Teest\Priyanka_CustAssignment\bin
 C:\Users\TRG\Downloads\PriyaAssignment\project\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.dll
 C:\Users\TRG\Downloads\PriyaAssignment\project\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.pdb
 C:\Users\TRG\Downloads\PriyaAssignment\project\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.csprojResolveAssemblyReference.cache
+E:\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.csproj.CoreCompileInputs.cache
 E:\Teest\Priyanka_CustAssignment\bin\Priyanka_CustAssignment.dll.config
 E:\Teest\Priyanka_CustAssignment\bin\Priyanka_CustAssignment.dll
 E:\Teest\Priyanka_CustAssignment\bin\Priyanka_CustAssignment.pdb
@@ -183,8 +184,6 @@ E:\Teest\Priyanka_CustAssignment\bin\Antlr3.Runtime.pdb
 E:\Teest\Priyanka_CustAssignment\bin\System.Diagnostics.DiagnosticSource.xml
 E:\Teest\Priyanka_CustAssignment\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 E:\Teest\Priyanka_CustAssignment\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.csproj.CoreCompileInputs.cache
 E:\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.csproj.CopyComplete
 E:\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.dll
 E:\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.pdb
-E:\Teest\Priyanka_CustAssignment\obj\Debug\Priyanka_CustAssignment.csprojAssemblyReference.cache

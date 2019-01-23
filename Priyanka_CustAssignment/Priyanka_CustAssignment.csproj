@@ -258,6 +258,7 @@
     <Content Include="Views\Priyanka_Customer\Details.cshtml" />
     <Content Include="Views\Priyanka_Customer\Edit.cshtml" />
     <Content Include="Views\Priyanka_Customer\Index.cshtml" />
+    <Content Include="Views\Admin\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

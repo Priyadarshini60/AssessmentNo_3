@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="custModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+<Schema Namespace="Priyanka_CustAssignment.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Priyanka_User">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-    <Property Name="UserName" Nullable="false" MaxLength="50" Type="nvarchar" />
-    <Property Name="Password" Nullable="false" MaxLength="50" Type="nvarchar" />
-    <Property Name="Role" Nullable="false" MaxLength="50" Type="nvarchar" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
-  <EntityContainer Name="custModelStoreContainer">
+  <EntityContainer Name="Priyanka_CustAssignmentStoreContainer">
     <EntitySet Name="Priyanka_User" EntityType="Self.Priyanka_User" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

@@ -44,7 +44,7 @@ namespace Priyanka_CustAssignment.Controllers
                     if ((dbModel.Priyanka_User.Any(x => x.UserName == userModel.UserName && x.Password == userModel.Password && x.Role.Equals("Admin"))))
                     {
                         Session["UserID"] = userModel.UserName;
-                        return RedirectToAction("Index", "Admin");
+                        return RedirectToAction("List", "Admin");
                     }
                     else if ((dbModel.Priyanka_User.Any(x => x.UserName == userModel.UserName && x.Password == userModel.Password && x.Role.Equals("Customer"))))
                     {
@@ -60,13 +60,8 @@ namespace Priyanka_CustAssignment.Controllers
                 }
 
             
-            // }
+           
         }
-        public ActionResult LogOut()
-        {
-            FormsAuthentication.SignOut();
-            Session.Contents.RemoveAll();
-                return RedirectToAction("Index", "Home");
-        }
+      
     }
 }

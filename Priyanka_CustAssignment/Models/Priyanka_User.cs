@@ -15,32 +15,31 @@ namespace Priyanka_CustAssignment.Models
 
     public partial class Priyanka_User
     {
-       
-            public Priyanka_User()
-            {
-                Role = "Customer";
-            }
+        public Priyanka_User()
+        {
+            Role = "Customer";
+        }
 
 
-            public int Id { get; set; }
+        public int Id { get; set; }
 
 
-            [Required(ErrorMessage = "This Field is Required")]
-            [DataType(DataType.EmailAddress)]
-            public string UserName { get; set; }
+        [Required(ErrorMessage = "This Field is Required")]
+        [DataType(DataType.EmailAddress)]
+        public string UserName { get; set; }
 
 
-            [Required(ErrorMessage = "This Field is Required")]
-            [DataType(DataType.Password)]
-            public string Password { get; set; }
+        [Required(ErrorMessage = "This Field is Required")]
+        [DataType(DataType.Password)]
+        public string Password { get; set; }
 
 
-            [DataType(DataType.Password)]
-            [Compare("Password")]
-            public string ConfirmPassword { get; set; }
+        [DataType(DataType.Password)]
+        [Compare("Password")]
+        public string ConfirmPassword { get; set; }
 
 
-            public string Role { get; set; }
-        
+        public string Role { get; set; }
     }
 }
+

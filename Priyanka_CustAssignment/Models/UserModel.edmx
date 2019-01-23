@@ -4,23 +4,24 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="custModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
+      <Schema Namespace="Priyanka_CustAssignment.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Priyanka_User">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
-          <Property Name="Id" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
-          <Property Name="UserName" Nullable="false" MaxLength="50" Type="nvarchar" />
-          <Property Name="Password" Nullable="false" MaxLength="50" Type="nvarchar" />
-          <Property Name="Role" Nullable="false" MaxLength="50" Type="nvarchar" />
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Role" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="custModelStoreContainer">
+        <EntityContainer Name="Priyanka_CustAssignmentStoreContainer">
           <EntitySet Name="Priyanka_User" EntityType="Self.Priyanka_User" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="custModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="Priyanka_CustAssignment" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Priyanka_User">
           <Key>
             <PropertyRef Name="Id" />
@@ -38,9 +39,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="custModelStoreContainer" CdmEntityContainer="Priyanka_UserEntities">
+        <EntityContainerMapping StorageEntityContainer="Priyanka_CustAssignmentStoreContainer" CdmEntityContainer="Priyanka_UserEntities">
           <EntitySetMapping Name="Priyanka_User">
-            <EntityTypeMapping TypeName="custModel.Priyanka_User">
+            <EntityTypeMapping TypeName="Priyanka_CustAssignment.Priyanka_User">
               <MappingFragment StoreEntitySet="Priyanka_User">
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="UserName" ColumnName="UserName" />
@@ -70,10 +71,6 @@
       </DesignerInfoPropertySet>
     </Options>
     <!-- Diagram content (shape and connector positions) -->
-    <Diagrams>
-      <Diagram DiagramId="1b5567f38daa40a1bb855f543a83221a" Name="Diagram1">
-        <EntityTypeShape EntityType="custModel.Priyanka_User" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-      </Diagram>
-    </Diagrams>
+    <Diagrams></Diagrams>
   </Designer>
 </edmx:Edmx>

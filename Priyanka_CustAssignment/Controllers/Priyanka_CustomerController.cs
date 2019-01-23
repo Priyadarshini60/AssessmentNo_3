@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Entity.Validation;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using Priyanka_CustAssignment.Models;
 
 namespace Priyanka_CustAssignment.Controllers
@@ -85,19 +87,89 @@ namespace Priyanka_CustAssignment.Controllers
         // POST: Priyanka_Customer/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,UserName,Name,Address,MobileNumber,Status")] Priyanka_Customer priyanka_Customer)
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Edit([Bind(Include = "UserName,Name,Address,MobileNumber")] Priyanka_Customer priyanka_Customer)
+        //{
+        //    try
+        //    {
+        //        if (ModelState.IsValid)
+        //        {
+        //            db.Entry(priyanka_Customer).State = EntityState.Modified;
+        //            db.SaveChanges();
+        //            return RedirectToAction("Index");
+        //        }
+        //    }
+        //    catch (DbEntityValidationException ex)
+        //    {
+        //        foreach (var entityValidationErrors in ex.EntityValidationErrors)
+        //        {
+        //            foreach (var validationError in entityValidationErrors.ValidationErrors)
+        //            {
+        //                Response.Write("Property: " + validationError.PropertyName + " Error: " + validationError.ErrorMessage);
+        //            }
+        //        }
+
+
+        //    }
+
+        //    return View(priyanka_Customer);
+        //}
+        //[HttpPost]
+      
+        //public ActionResult Edit(FormCollection Fc)
+        //{
+        //    using (custEntities objContext = new custEntities())
+        //    {
+        //        try
+        //        {
+        //            Priyanka_Customer Tbl = new Priyanka_Customer();
+        //            //  
+        //            Tbl.Name = Fc["Name"].ToString();
+        //            Tbl.Address = Fc["Address"].ToString();
+        //            Tbl.MobileNumber = Fc["MobileNumber"].ToString();
+        //            objContext.Priyanka_Customer.Add(Tbl);
+        //            int i = objContext.SaveChanges();
+        //            if (i > 0)
+        //            {
+        //                ViewBag.Msg = "Data Saved Suuceessfully.";
+        //            }
+
+        //        }
+        //        catch(DbEntityValidationException ex)
+        //        {
+                   
+
+        //        }
+
+        //    }
+
+        //    return View();
+        //}
+
+            [HttpPost]
+            [ValidateAntiForgeryToken]
+            
+        public ActionResult Edit(FormCollection collection)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(priyanka_Customer).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            return View(priyanka_Customer);
-        }
+                var mdl = new Priyanka_Customer
+                {
+                    Name = collection["Name"],
+                    Address = collection["Address"],
+                    //MobileNumber =int.Parse(collection["MobileNumber"]),
 
+                };
+                db.Priyanka_Customer.Add(mdl);
+                db.SaveChanges();
+                RedirectToAction("Index");
+
+            }
+            return View();
+
+
+        }
         // GET: Priyanka_Customer/Delete/5
         public ActionResult Delete(int? id)
         {
@@ -132,5 +204,16 @@ namespace Priyanka_CustAssignment.Controllers
             }
             base.Dispose(disposing);
         }
+
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            Session.Contents.RemoveAll();
+            TempData["message"] = "You are sign out";
+            return RedirectToAction("Index", "Home");
+
+        }
     }
+
 }

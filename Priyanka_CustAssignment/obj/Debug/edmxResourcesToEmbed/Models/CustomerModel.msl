@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="custModel1StoreContainer" CdmEntityContainer="custEntities">
+  <EntityContainerMapping StorageEntityContainer="Priyanka_CustAssignmentStoreContainer" CdmEntityContainer="custEntities">
     <EntitySetMapping Name="Priyanka_Customer">
-      <EntityTypeMapping TypeName="custModel1.Priyanka_Customer">
+      <EntityTypeMapping TypeName="Priyanka_CustAssignment.Priyanka_Customer">
         <MappingFragment StoreEntitySet="Priyanka_Customer">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
